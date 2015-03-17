@@ -1,0 +1,50 @@
+<ion-view view-title="Contact Us" hide-nav-bar="true">
+  
+  <ion-content >
+  <img src="img/header.png">
+    <div><h2>Contact Us</h2></div>
+    <div class="list">
+      <label class="item item-input">
+        <span class="input-label">First Name</span>
+        <input type="text" ng-model="lead.FirstName">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Last Name</span>
+        <input type="text" ng-model="lead.LastName">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Company</span>
+        <input type="text" ng-model="lead.Company">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Email</span>
+        <input type="text" ng-model="lead.Email">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Phone</span>
+        <input type="text" ng-model="lead.WorkPhone">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">Zip</span>
+        <input type="text" ng-model="lead.address.PostalCode" ng-blur="getCityState()">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">City</span>
+        <input type="text" ng-model="lead.address.City">
+      </label>
+      <label class="item item-input">
+        <span class="input-label">State</span>
+        <input type="text" ng-model="lead.address.State">
+      </label>
+      
+      <label class="item item-input">
+        <span class="input-label">Comments</span>
+        <textarea rows="5" ng-model="lead.Notes"></textarea>
+      </label>
+      <br><button class="button button-positive" ng-click="createLead()">
+        Submit
+      </button>
+    </div>
+    <div>{{result}}
+  </ion-content>
+</ion-view>

@@ -3,6 +3,8 @@ angular.module('starter.controllers', [])
 .controller('contactUsCtrl', function($scope, InforCRM) {
 
   $scope.lead = {};
+  
+  
   $scope.result = "Please enter your information and then submit";
   
   var config = {
@@ -23,6 +25,8 @@ angular.module('starter.controllers', [])
   };
 
   $scope.createLead = function(){
+    $scope.lead.QualificationCategory = 'QQF8AA000IZD';
+
     InforCRM.createEntityRecord(config, 'Leads', $scope.lead)
     .then(function(lead){
       $scope.lead = {};

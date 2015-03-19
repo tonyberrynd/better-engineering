@@ -39,6 +39,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   // Each tab has its own nav history stack:
 
+  /*
   .state('tab.contactus', {
     url: '/contactus',
     views: {
@@ -47,6 +48,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'contactUsCtrl'
       }
     }
+  })
+*/
+
+  .state('contactus', {
+    url: '/contactus',
+    controller: 'contactUsCtrl'
   })
 
   .state('tab.requestquote', {
@@ -70,6 +77,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/contactus');
+  $urlRouterProvider.otherwise('/contactus');
 
 });
